@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <!-- styles  -->
+  <link rel="stylesheet" href="./styles/style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+
+<body>
+  <section style="margin-top: 50px;" class="fixed_width">
+    <div>
+      <h1 style="font-weight: bold; font-size: 26px;">Discuss the scope of <span>var</span>, <span>let</span>, and
+        <span>const</span>
+      </h1>
+      <p><span style="font-weight: bold; font-size: 20px;">var Scope:</span> <br>
+        In JavaScript, the var keyword is function-scoped. This means that a variable declared using var is visible
+        throughout the entire function in which it is declared, regardless of block structures. Additionally, if a
+        variable is declared using var outside any function, it becomes a global variable and is accessible throughout
+        the entire program. One notable characteristic is that var declarations are hoisted to the top of their
+        containing function or global scope, which means they are moved to the top during the compilation phase.
+        <br>
+        <br>
+
+        <span style="font-weight: bold; font-size: 20px;"> let and const Scope:</span><br>
+        In contrast to var, both let and const have block-level scope. This means that they are confined to the block in
+        which they are declared, whether that be an if statement, loop, or any other block structure. Variables declared
+        using let or const are not hoisted to the top of their scope in the same way var is. Instead, they are hoisted,
+        but not initialized until the line of code is executed. This behavior can help avoid certain issues related to
+        hoisting.
+        <br>
+        <br>
+
+
+        <span style="font-weight: bold; font-size: 20px;"> Reassignment and Immutability:</span>
+
+        Another key distinction lies in reassignment and immutability. Variables declared with var can be reassigned and
+        updated freely. On the other hand, variables declared with let can be reassigned, but they cannot be re-declared
+        in the same scope. Variables declared with const are constants and cannot be reassigned. They must be assigned a
+        value at the time of declaration, and once assigned, their value cannot be changed.
+
+        <br>
+        <br>
+        <span style="font-weight: bold; font-size: 20px;"> Hoisting:</span>
+
+        Hoisting is a behavior in JavaScript where variable and function declarations are moved to the top of their
+        containing scope during the compilation phase. Both var and function declarations are hoisted, but there are
+        differences. var declarations are hoisted and initialized with undefined, while let and const declarations are
+        hoisted but remain uninitialized until the actual line of code where they are declared.
+        <br>
+        <br>
+
+        In conclusion, while var has function-level scope and some hoisting peculiarities, let and const provide
+        block-level scoping and are generally preferred for their more predictable behavior and support for creating
+        constants.
+      </p>
+    </div>
+
+    <div style="margin-top: 50px;">
+      <h1 style="font-weight: bold; font-size: 26px;">Tell us the use cases of <span>null</span> and
+        <span>undefined</span>
+      </h1>
+      <p><span style="font-weight: bold; font-size: 20px;">null:</span> <br>
+        It is explicitly assigned by developers to variables, indicating the intentional absence of any object value.
+        Commonly used when a variable is expected to hold an object later but starts without one. For example,
+        initializing a variable:
+        <br>
+
+      <p>let myVariable = null;
+      </p>
+
+      <span style="font-weight: bold; font-size: 20px;"> undefined:</span><br>
+      This value is often the default state when a variable is declared but not explicitly assigned a value. It can also
+      result from accessing properties that do not exist in objects or when a function is called with fewer arguments
+      than its declared parameters.
+      <br>
+      <p>let someVariable;
+        <br>
+        console.log(someVariable); // Outputs: undefined
+      </p>
+
+
+
+      Understanding these distinctions allows developers to use null when they want to indicate a deliberate absence of
+      an object and recognize undefined as a default state or a result of specific language behaviors. Both play
+      essential roles in writing clear, intentional, and error-resistant code.</p>
+    </div>
+
+    <div style="margin-top: 50px;">
+      <h1 style="font-weight: bold; font-size: 26px;">What do you mean by REST API?</h1>
+      <p> 
+        <span style="font-weight: bold; font-size: 20px;"> REST API:</span> short for Representational State Transfer Application Programming Interface, is a widely adopted
+        architectural style for designing networked applications. It provides a set of conventions and rules that
+        facilitate the building and interaction of web services, aligning with the principles of REST. The fundamental
+        idea behind REST API is to establish a standardized approach for communication over the Hypertext Transfer
+        Protocol (HTTP).
+        <br>
+        <br>
+        REST follows several key principles to ensure simplicity, scalability, and uniformity in the design of APIs. It
+        emphasizes stateless communication, meaning that each client request to the server must contain all the
+        necessary information for the server to comprehend and fulfill the request. The API maintains a uniform
+        interface, utilizing resource-based URLs, standard HTTP methods (such as GET, POST, PUT, and DELETE), and
+        commonly employing representations like JSON or XML for data exchange.
+        <br>
+        <br>
+        A core concept of REST is the identification and manipulation of resources. Resources, which can be data objects
+        or services, are uniquely identified by URLs and can be interacted with using standard HTTP methods. The
+        client-server architecture, where the client handles the user interface and the server manages requests and
+        resources, is a fundamental aspect of REST. Additionally, REST emphasizes a stateless server, meaning that the
+        server doesn't store client state between requests.
+        <br>
+        <br>
+        Due to its simplicity, scalability, and widespread support, REST APIs have become a standard choice for enabling
+        communication between different systems and services on the web. JSON, providing a lightweight and
+        human-readable data format, is commonly used with REST for data interchange, contributing to the widespread
+        adoption of this architectural style in modern web development.
+      </p>
+    </div>
+    <a style="display: flex; justify-content: center; align-items: center; margin: 30px 0px;" href="./index.html">
+      <button class="blog_button">Back to Home</button>
+    </a>
+  </section>
+</body>
+
+</html>
